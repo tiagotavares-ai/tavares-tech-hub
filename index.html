@@ -4,40 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tavares Tech Hub | Soluções Inteligentes</title>
-    <meta name="description" content="Soluções inteligentes para negócios e smartphones. Transparência total e economia real com Tiago Tavares.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --primary: #0056b3; --secondary: #28a745; --light: #f8f9fa; --dark: #1a1a1a; --accent: #ffc107; }
-        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background: #ececec; }
-        header { background: var(--dark); color: white; padding: 3rem 1rem; text-align: center; border-bottom: 4px solid var(--primary); }
-        header h1 { margin: 0; font-size: 2.2rem; letter-spacing: 2px; }
-        header p { margin: 10px 0 0; opacity: 0.9; }
-        .promo-banner { background: var(--primary); color: white; padding: 10px; text-align: center; font-weight: bold; font-size: 0.9rem; }
-        .container { max-width: 1100px; margin: 20px auto; padding: 10px; }
-        .service-section { background: white; margin-bottom: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; }
-        .section-header { background: var(--dark); color: white; padding: 15px 20px; margin: 0; font-size: 1.3rem; display: flex; align-items: center; gap: 10px; }
-        .section-header i { color: var(--accent); }
-        table { width: 100%; border-collapse: collapse; background: white; }
-        th, td { padding: 15px; text-align: left; border-bottom: 1px solid #eee; }
-        th { background: #f4f4f4; font-size: 0.85rem; text-transform: uppercase; color: #666; }
-        .price-me { color: var(--secondary); font-weight: 800; font-size: 1.1rem; }
-        .price-market { color: #999; text-decoration: line-through; font-size: 0.85rem; }
-        .btn-wa { display: inline-flex; align-items: center; gap: 5px; background: var(--secondary); color: white; padding: 8px 15px; border-radius: 25px; text-decoration: none; font-size: 0.85rem; font-weight: bold; transition: transform 0.2s; }
-        .btn-wa:active { transform: scale(0.95); }
-        footer { background: var(--dark); color: white; text-align: center; padding: 40px 20px; }
-        .social-links { margin-top: 20px; display: flex; justify-content: center; gap: 25px; }
-        .social-links a { color: white; font-size: 1.8rem; text-decoration: none; transition: color 0.3s; }
-        .social-links a:hover { color: var(--accent); }
-        
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            table, thead, tbody, th, td, tr { display: block; }
-            th { display: none; }
-            tr { padding: 15px 10px; border-bottom: 2px solid #eee; }
-            td { border: none; padding: 5px 0 5px 45%; position: relative; min-height: 30px; }
-            td:before { position: absolute; left: 10px; width: 40%; font-weight: bold; color: var(--primary); font-size: 0.8rem; content: attr(data-label); }
-            .btn-wa { width: 100%; justify-content: center; margin-top: 10px; padding: 12px; }
+        :root {
+            --primary: #007bff;
+            --secondary: #6c757d;
+            --dark: #1a1a1a;
+            --light: #f8f9fa;
+            --success: #28a745;
         }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light);
+            color: #333;
+        }
+
+        header {
+            background-color: var(--dark);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        h1 { margin: 0; font-size: 1.8rem; color: #fff; }
+        h2 { color: var(--dark); border-bottom: 2px solid var(--primary); padding-bottom: 10px; margin-top: 40px; text-transform: uppercase; font-size: 1.2rem; }
+        h3 { color: var(--primary); font-size: 1rem; margin-top: 25px; }
+
+        .table-container { width: 100%; overflow-x: auto; background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        
+        table { width: 100%; border-collapse: collapse; min-width: 600px; }
+        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #f2f2f2; font-weight: bold; }
+        
+        .price-tag { font-weight: bold; color: var(--success); white-space: nowrap; }
+        
+        .btn-buy {
+            background-color: var(--success);
+            color: white;
+            padding: 6px 12px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            display: inline-block;
+            transition: opacity 0.3s;
+        }
+        
+        .btn-buy:hover { opacity: 0.8; }
+
+        .badge-contract { background: #333; color: #fff; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; vertical-align: middle; }
+
+        footer { background: var(--dark); color: #ccc; text-align: center; padding: 30px 10px; margin-top: 50px; }
+        .social-links a { color: #fff; margin: 0 10px; text-decoration: none; font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -47,149 +73,201 @@
     <p>Tiago Tavares | Consultoria Estratégica e Suporte Técnico</p>
 </header>
 
-<div class="promo-banner">
-    <i class="fas fa-percent"></i> Transparência total: compare meus preços com o mercado e economize!
-</div>
-
 <div class="container">
 
-    <!-- SOLUÇÕES EMPRESARIAIS -->
-    <div class="service-section">
-        <h2 class="section-header"><i class="fas fa-briefcase"></i> GESTÃO & FINANÇAS</h2>
+    <h2>1. Assistência Técnica Mobile e Segurança Digital</h2>
+    <div class="table-container">
         <table>
-            <thead><tr><th>Serviço</th><th>Meu Preço</th><th>Mercado</th><th>Ação</th></tr></thead>
+            <thead>
+                <tr>
+                    <th>Serviço</th>
+                    <th>Detalhamento Técnico</th>
+                    <th>Preço</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
             <tbody>
                 <tr>
-                    <td data-label="Serviço">Consultoria Fiscal Avulsa (5h)</td>
-                    <td data-label="Meu Preço" class="price-me">R$ 100,00</td>
-                    <td data-label="Mercado" class="price-market">R$ 200–1.000</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá!%20Tenho%20interesse%20na%20Consultoria%20Fiscal%20Avulsa." target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i> Contratar</a></td>
+                    <td>Desbloqueio iPhone</td>
+                    <td>iCloud, tela, recuperação de conta/senhas Apple.</td>
+                    <td class="price-tag">R$ 50 - 150</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Preciso de ajuda com Desbloqueio de iPhone." class="btn-buy">Contratar</a></td>
                 </tr>
                 <tr>
-                    <td data-label="Serviço">Consultoria Fiscal (Contrato)</td>
-                    <td data-label="Meu Preço" class="price-me">R$ 10,00/h</td>
-                    <td data-label="Mercado" class="price-market">R$ 200–1.000</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá!%20Quero%20saber%20sobre%20o%20Contrato%20de%20Consultoria%20Fiscal." target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i> Contratar</a></td>
+                    <td>Desbloqueio Android</td>
+                    <td>Conta Google/Samsung, tela e recuperação de senhas.</td>
+                    <td class="price-tag">R$ 30 - 50</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Preciso de ajuda com Desbloqueio de Android." class="btn-buy">Contratar</a></td>
                 </tr>
                 <tr>
-                    <td data-label="Serviço">WhatsApp Business (Config/Treino)</td>
-                    <td data-label="Meu Preço" class="price-me">R$ 70,00</td>
-                    <td data-label="Mercado" class="price-market">R$ 500–2.000</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá!%20Preciso%20configurar%20meu%20WhatsApp%20Business." target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i> Contratar</a></td>
+                    <td>Remoção de Vírus e Ads</td>
+                    <td>Reset manual, limpeza, remoção de anúncios e notificações.</td>
+                    <td class="price-tag">R$ 20 - 30</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Preciso remover vírus, anúncios ou notificações." class="btn-buy">Contratar</a></td>
                 </tr>
                 <tr>
-                    <td data-label="Serviço">Fluxo de Caixa (Sistema/Planilha)</td>
-                    <td data-label="Meu Preço" class="price-me">R$ 70,00</td>
-                    <td data-label="Mercado" class="price-market">R$ 378–756</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá!%20Quero%20organizar%20meu%20Fluxo%20de%20Caixa." target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i> Contratar</a></td>
+                    <td>Limpeza e Otimização</td>
+                    <td>Padrão 7 passos + suporte para compra de memória.</td>
+                    <td class="price-tag">R$ 10 - 30</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero a Limpeza e Otimização de 7 passos." class="btn-buy">Contratar</a></td>
                 </tr>
                 <tr>
-                    <td data-label="Serviço">Regularização MEI (DASN)</td>
-                    <td data-label="Meu Preço" class="price-me">R$ 40,00</td>
-                    <td data-label="Mercado" class="price-market">R$ 50–200</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá!%20Preciso%20regularizar%20meu%20MEI%20(DASN)." target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i> Contratar</a></td>
+                    <td>Instalação de Apps</td>
+                    <td>Bancários, redes sociais, jogos e serviços em geral.</td>
+                    <td class="price-tag">R$ 5 - 20</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Preciso configurar aplicativos no meu celular." class="btn-buy">Contratar</a></td>
                 </tr>
             </tbody>
         </table>
     </div>
 
-    <!-- MARKETING & VENDAS -->
-    <div class="service-section">
-        <h2 class="section-header"><i class="fas fa-bullhorn"></i> MARKETING & PRESENÇA DIGITAL</h2>
+    <h2>2. Consultoria de Marketing</h2>
+    
+    <h3>Consultoria de Negócio</h3>
+    <div class="table-container">
         <table>
             <tbody>
                 <tr>
-                    <td data-label="Serviço">Logotipo + Slogan</td>
-                    <td data-label="Meu Preço" class="price-me">R$ 60,00</td>
-                    <td data-label="Mercado" class="price-market">R$ 100–1.000</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá!%20Quero%20criar%20um%20Logotipo%20e%20Slogan." target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i> Contratar</a></td>
+                    <td>Diagnóstico Digital</td>
+                    <td>Análise estratégica do posicionamento atual.</td>
+                    <td class="price-tag">R$ 80,00</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero um Diagnóstico Digital do meu negócio." class="btn-buy">Contratar</a></td>
                 </tr>
                 <tr>
-                    <td data-label="Serviço">Criação de Perfil Profissional</td>
-                    <td data-label="Meu Preço" class="price-me">R$ 50,00</td>
-                    <td data-label="Mercado" class="price-market">R$ 50–200</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá!%20Quero%20criar%20meu%20Perfil%20Profissional%20nas%20redes." target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i> Contratar</a></td>
+                    <td>Logotipo + Slogan</td>
+                    <td>Criação de identidade visual e conceito.</td>
+                    <td class="price-tag">R$ 60,00</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero criar meu Logotipo e Slogan." class="btn-buy">Contratar</a></td>
                 </tr>
                 <tr>
-                    <td data-label="Serviço">Cadastro Vendas (iFood/Shopee)</td>
-                    <td data-label="Meu Preço" class="price-me">R$ 55,00</td>
-                    <td data-label="Mercado" class="price-market">R$ 50–200</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá!%20Quero%20me%20cadastrar%20em%20plataformas%20de%20venda." target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i> Contratar</a></td>
+                    <td>Perfil Profissional</td>
+                    <td>Configuração de Google, Instagram ou Facebook.</td>
+                    <td class="price-tag">R$ 50,00</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero configurar meu Perfil Profissional." class="btn-buy">Contratar</a></td>
                 </tr>
             </tbody>
         </table>
     </div>
 
-    <!-- ASSISTÊNCIA TÉCNICA -->
-    <div class="service-section">
-        <h2 class="section-header"><i class="fas fa-mobile-alt"></i> ASSISTÊNCIA TÉCNICA (SOFTWARE)</h2>
+    <h3>Marketing Digital (Posts e Vídeos IA)</h3>
+    <div class="table-container">
         <table>
+            <thead>
+                <tr>
+                    <th>Quantidade</th>
+                    <th>Vídeo IA</th>
+                    <th>Foto/Cartaz</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
             <tbody>
                 <tr>
-                    <td data-label="Serviço">Desbloqueio iPhone/Android</td>
-                    <td data-label="Meu Preço" class="price-me">R$ 70,00 - 200,00</td>
-                    <td data-label="Mercado" class="price-market">R$ 100–300</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá!%20Preciso%20de%20ajuda%20com%20desbloqueio%20de%20celular." target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i> Contratar</a></td>
+                    <td>1 Post Avulso</td>
+                    <td class="price-tag">R$ 25,00</td>
+                    <td class="price-tag">R$ 12,50</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero um post avulso." class="btn-buy">Pedir</a></td>
                 </tr>
                 <tr>
-                    <td data-label="Serviço">Recuperação de Contas (Google/Gov)</td>
-                    <td data-label="Meu Preço" class="price-me">R$ 20,00 - 50,00</td>
-                    <td data-label="Mercado" class="price-market">R$ 30–100</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá!%20Preciso%20recuperar%20acesso%20à%20minha%20conta." target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i> Contratar</a></td>
+                    <td>Pacote Mensal (8)</td>
+                    <td class="price-tag">R$ 70,00</td>
+                    <td class="price-tag">R$ 35,00</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero o Pacote Mensal de 8 posts." class="btn-buy">Assinar</a></td>
                 </tr>
-                <tr>
-                    <td data-label="Serviço">Configuração App Bancário</td>
-                    <td data-label="Meu Preço" class="price-me">R$ 35,00</td>
-                    <td data-label="Mercado" class="price-market">R$ 30–80</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá!%20Preciso%20configurar%20meu%20Aplicativo%20Bancário." target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i> Contratar</a></td>
+                <tr style="background-color: #f9f9f9;">
+                    <td><strong>Post Recorrente</strong> <span class="badge-contract">CONTRATO</span></td>
+                    <td class="price-tag">R$ 5,00/cada</td>
+                    <td class="price-tag">R$ 2,50/cada</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero formalizar o Contrato de Posts Recorrentes (mín. 5/semana)." class="btn-buy">Contratar</a></td>
                 </tr>
             </tbody>
         </table>
     </div>
 
-    <!-- DEFESA DO CONSUMIDOR -->
-    <div class="service-section">
-        <h2 class="section-header"><i class="fas fa-balance-scale"></i> DEFESA DO CONSUMIDOR & DIREITOS</h2>
+    <h2>3. Suporte Comercial e Fiscal</h2>
+    <div class="table-container">
         <table>
+            <thead>
+                <tr>
+                    <th>Serviço</th>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
             <tbody>
                 <tr>
-                    <td data-label="Serviço">Contestação Benefícios (PIS/FGTS)</td>
-                    <td data-label="Meu Preço" class="price-me">R$ 80,00</td>
-                    <td data-label="Mercado" class="price-market">R$ 80–200</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá!%20Preciso%20contestar%20meus%20benefícios%20governamentais." target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i> Contratar</a></td>
+                    <td>Cadastro em Plataformas</td>
+                    <td>iFood, Shopee, Mercado Livre, etc.</td>
+                    <td class="price-tag">R$ 30 - 50</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Preciso de ajuda com cadastro em plataformas de venda." class="btn-buy">Contratar</a></td>
                 </tr>
                 <tr>
-                    <td data-label="Serviço">Direitos PCDs e Autistas (Passe)</td>
-                    <td data-label="Meu Preço" class="price-me">R$ 50,00</td>
-                    <td data-label="Mercado" class="price-market">R$ 50–100</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá!%20Gostaria%20de%20requerer%20direitos/Passe%20Livre." target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i> Contratar</a></td>
+                    <td>Proposta Comercial</td>
+                    <td>Elaboração técnica para fechamento de vendas.</td>
+                    <td class="price-tag">R$ 30 - 40</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Preciso de uma Proposta Comercial profissional." class="btn-buy">Contratar</a></td>
+                </tr>
+                <tr>
+                    <td>Consultoria Fiscal (Avulsa)</td>
+                    <td>Sessão de orientação técnica (até 5h).</td>
+                    <td class="price-tag">R$ 70 - 100</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Preciso de uma Consultoria Fiscal avulsa." class="btn-buy">Contratar</a></td>
+                </tr>
+                <tr>
+                    <td>Regularização MEI</td>
+                    <td>Declaração Anual (DASN) e pendências.</td>
+                    <td class="price-tag">R$ 40,00</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Preciso regularizar meu MEI." class="btn-buy">Contratar</a></td>
+                </tr>
+                <tr>
+                    <td>Fluxo de Caixa</td>
+                    <td>Implementação de sistema ou planilha.</td>
+                    <td class="price-tag">R$ 50 - 100</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero organizar meu Fluxo de Caixa." class="btn-buy">Contratar</a></td>
+                </tr>
+                <tr>
+                    <td>Consultoria (Mensal)</td>
+                    <td>Acompanhamento recorrente.</td>
+                    <td class="price-tag">R$ 10,00/hora</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero saber sobre o contrato mensal de Consultoria Fiscal." class="btn-buy">Contratar</a></td>
                 </tr>
             </tbody>
         </table>
     </div>
 
-    <!-- PAPELARIA -->
-    <div class="service-section">
-        <h2 class="section-header"><i class="fas fa-file-alt"></i> CARREIRA & DOCUMENTOS</h2>
+    <h2>4. Papelaria e Direitos</h2>
+    <div class="table-container">
         <table>
             <tbody>
                 <tr>
-                    <td data-label="Serviço">Currículo Profissional Premium</td>
-                    <td data-label="Meu Preço" class="price-me">R$ 35,00</td>
-                    <td data-label="Mercado" class="price-market">R$ 30–80</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá!%20Quero%20fazer%20meu%20Currículo%20Premium." target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i> Contratar</a></td>
+                    <td>Currículo Profissional</td>
+                    <td>Elaboração e formatação técnica premium.</td>
+                    <td class="price-tag">R$ 5 - 20</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero fazer meu currículo profissional." class="btn-buy">Fazer Agora</a></td>
                 </tr>
                 <tr>
-                    <td data-label="Serviço">Perfil LinkedIn Profissional</td>
-                    <td data-label="Meu Preço" class="price-me">R$ 45,00</td>
-                    <td data-label="Mercado" class="price-market">R$ 40–100</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá!%20Quero%20otimizar%20meu%20Perfil%20no%20LinkedIn." target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i> Contratar</a></td>
+                    <td>Perfil LinkedIn</td>
+                    <td>Otimização estratégica de perfil e SEO.</td>
+                    <td class="price-tag">R$ 50,00</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero otimizar meu perfil no LinkedIn." class="btn-buy">Contratar</a></td>
                 </tr>
                 <tr>
-                    <td data-label="Serviço">Contrato Simples entre Partes</td>
-                    <td data-label="Meu Preço" class="price-me">R$ 40,00</td>
-                    <td data-label="Mercado" class="price-market">R$ 40–100</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá!%20Preciso%20de%20um%20Contrato%20de%20Serviço/Venda." target="_blank" class="btn-wa"><i class="fab fa-whatsapp"></i> Contratar</a></td>
+                    <td>Contrato Simples</td>
+                    <td>Redação de documentos de compra, venda ou serviço.</td>
+                    <td class="price-tag">R$ 20,00</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Preciso da redação de um contrato simples." class="btn-buy">Solicitar</a></td>
+                </tr>
+                <tr>
+                    <td>Direitos PCD e Autistas</td>
+                    <td>Solicitação de Passe Livre e suporte em direitos.</td>
+                    <td class="price-tag">R$ 30,00</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Preciso de suporte com direitos PCD/Autista." class="btn-buy">Solicitar</a></td>
+                </tr>
+                <tr>
+                    <td>Contestação Benefícios</td>
+                    <td>Recursos de PIS, FGTS e benefícios sociais.</td>
+                    <td class="price-tag">R$ 80,00</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Preciso contestar um benefício (PIS/FGTS)." class="btn-buy">Contratar</a></td>
                 </tr>
             </tbody>
         </table>
@@ -200,11 +278,10 @@
 <footer>
     <p><strong>TAVARES TECH HUB</strong><br>Excelência Técnica e Transparência Digital</p>
     <div class="social-links">
-        <a href="https://www.instagram.com/tiago.consultoriatech/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/tiago-tavares-07386826b" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://wa.me/5588982340081" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/tiagotavares.ai">Instagram</a> | 
+        <a href="https://www.linkedin.com/in/tiagotavares-ai">LinkedIn</a>
     </div>
-    <p style="font-size: 0.7rem; margin-top: 20px; opacity: 0.6;">Preços sujeitos a alteração. Valores de mercado baseados em pesquisa de referência.</p>
+    <p style="font-size: 0.7rem; margin-top: 20px;">Preços sujeitos a alteração conforme complexidade do serviço.</p>
 </footer>
 
 </body>
