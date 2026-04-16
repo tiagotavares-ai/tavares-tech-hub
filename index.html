@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tavares Tech Hub | Orquestração de IA</title>
     <style>
-        :root { --primary: #007bff; --accent: #00d4ff; --dark: #0f172a; --light: #f8fafc; --success: #10b981; --gold: #f59e0b; }
+        :root { --primary: #007bff; --accent: #00d4ff; --dark: #0f172a; --light: #f8fafc; --success: #10b981; --gold: #f59e0b; --promo: #e11d48; }
         body { font-family: 'Inter', sans-serif; line-height: 1.6; margin: 0; background-color: var(--light); color: #1e293b; }
         header { background: linear-gradient(135deg, var(--dark) 0%, #1e293b 100%); color: white; padding: 3rem 1rem; text-align: center; border-bottom: 4px solid var(--primary); }
         .container { max-width: 1000px; margin: 20px auto; padding: 0 15px; }
         .slogan { font-size: 0.9rem; color: var(--accent); margin-top: 10px; font-weight: 300; text-transform: uppercase; }
         
+        /* Banner de Promoção */
+        .promo-banner { background: var(--promo); color: white; text-align: center; padding: 10px; border-radius: 8px; margin-bottom: 20px; font-weight: bold; font-size: 0.9rem; border: 2px dashed #fff; }
+
         /* Dashboard de Agentes */
         .dashboard { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
         .dashboard h3 { margin-top: 0; color: var(--dark); font-size: 1rem; border-bottom: 2px solid var(--primary); display: inline-block; padding-bottom: 5px; }
@@ -39,40 +42,44 @@
 
 <div class="container">
 
+    <div class="promo-banner">
+        🚀 PROMOÇÃO DE BOAS-VINDAS: Todo novo cliente tem de 10% a 90% de DESCONTO na primeira contratação!
+    </div>
+
     <section class="dashboard">
         <h3>🤖 Quadro de Comando de Agentes</h3>
         <div class="agent-grid">
             <div class="agent-card" style="border-left-color: var(--gold);"><strong>APOLO</strong><span>Pesquisa Bíblica & Resiliência</span></div>
             <div class="agent-card"><strong>AFONSO</strong><span>Marketing & Mídia IA</span></div>
-            <div class="agent-card"><strong>ASSIS</strong><span>Gestão Fiscal & Financeira</span></div>
+            <div class="agent-card"><strong>ASSIS</strong><span>Gestão Comercial & Fiscal</span></div>
             <div class="agent-card"><strong>TAVARES</strong><span>Execução Passo a Passo</span></div>
             <div class="agent-card"><strong>AMÓS</strong><span>Ética & Direitos Sociais</span></div>
             <div class="agent-card"><strong>DIL/THESSY</strong><span>Mentoria Tech & ADS</span></div>
         </div>
     </section>
 
-    <h2>1. Inteligência e Pesquisa de Fé (Apolo Agent)</h2>
+    <h2>1. INTELIGÊNCIA E PESQUISA DE FÉ</h2>
     <div class="table-container">
         <table>
-            <thead><tr><th>Serviço</th><th>Execução Passo a Passo</th><th>Investimento</th><th>Ação</th></tr></thead>
+            <thead><tr><th>Serviço</th><th>Função (Execução)</th><th>Investimento</th><th>Ação</th></tr></thead>
             <tbody>
                 <tr style="background:#fffbeb">
                     <td><strong>Preparação Ágil (Nicho JW)</strong></td>
-                    <td>Síntese de reuniões, esboços de oratória e comentários objetivos.</td>
+                    <td>Síntese para reuniões, esboços de oratória e comentários objetivos.</td>
                     <td class="price-tag">R$ 20 - 40</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá! Suporte Apolo para Pesquisa JW." class="btn-buy">Contratar</a></td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Sou novo cliente e quero o desconto para Pesquisa JW." class="btn-buy">Contratar</a></td>
                 </tr>
                 <tr>
                     <td>Plano de Estudo Bíblico</td>
                     <td>Organização de temas e referências cruzadas para pesquisadores.</td>
                     <td class="price-tag">R$ 30,00</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero um Plano de Estudo Bíblico." class="btn-buy">Contratar</a></td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Sou novo cliente e quero o desconto no Plano de Estudo." class="btn-buy">Contratar</a></td>
                 </tr>
             </tbody>
         </table>
     </div>
 
-    <h2>2. Marketing e Orquestração IA (Afonso Agent)</h2>
+    <h2>2. MARKETING E ORQUESTRAÇÃO DE IA</h2>
     <div class="table-container">
         <table>
             <tbody>
@@ -80,19 +87,19 @@
                     <td><strong>Mentoria IA Express</strong></td>
                     <td>1 hora de consultoria para uso de IA no seu negócio.</td>
                     <td class="price-tag">R$ 120,00</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá! Agendar Mentoria IA Express." class="btn-buy">Agendar</a></td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Sou novo cliente e quero desconto na Mentoria IA." class="btn-buy">Agendar</a></td>
                 </tr>
                 <tr>
                     <td>Identidade Visual Hub</td>
-                    <td>Criação de Logo, Slogan e Posicionamento Digital.</td>
+                    <td>Criação de Logo, Slogan e Posicionamento Digital Estratégico.</td>
                     <td class="price-tag">R$ 80,00</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá! Criar Identidade Visual." class="btn-buy">Contratar</a></td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Sou novo cliente e quero desconto na Identidade Visual." class="btn-buy">Contratar</a></td>
                 </tr>
             </tbody>
         </table>
     </div>
 
-    <h2>3. Assistência e Blindagem Digital (Tavares Agent)</h2>
+    <h2>3. ASSISTÊNCIA E BLINDAGEM DIGITAL</h2>
     <div class="table-container">
         <table>
             <tbody>
@@ -100,33 +107,33 @@
                     <td><strong>Plano Blindagem Digital</strong></td>
                     <td>Mensal: Suporte prioritário, backup e limpeza remota de ameaças.</td>
                     <td class="price-tag">R$ 20,00/mês</td>
-                    <td><a href="https://wa.me/5588982340081?text=Assinar Blindagem Digital." class="btn-buy">Assinar</a></td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero assinar a Blindagem com desconto de novo cliente." class="btn-buy">Assinar</a></td>
                 </tr>
                 <tr>
                     <td>Desbloqueio iOS/Android</td>
-                    <td>Procedimento técnico para recuperação de acesso e segurança.</td>
+                    <td>Procedimento técnico passo a passo para recuperação de acesso.</td>
                     <td class="price-tag">R$ 30 - 150</td>
-                    <td><a href="https://wa.me/5588982340081?text=Ajuda com Desbloqueio." class="btn-buy">Solicitar</a></td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Sou novo cliente e quero desconto no Desbloqueio." class="btn-buy">Solicitar</a></td>
                 </tr>
             </tbody>
         </table>
     </div>
 
-    <h2>4. Gestão, Carreira e Direitos</h2>
+    <h2>4. GESTÃO, CARREIRA E DIREITOS SOCIAIS</h2>
     <div class="table-container">
         <table>
             <tbody>
                 <tr>
-                    <td>Combo "Carreira Top"</td>
-                    <td>Currículo Premium + LinkedIn + Simulação de Entrevista IA.</td>
+                    <td><strong>Combo "Carreira Top"</strong></td>
+                    <td>Currículo Premium + LinkedIn + Simulação de Entrevista via IA.</td>
                     <td class="price-tag">R$ 65,00</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero o Combo Carreira Top." class="btn-buy">Contratar</a></td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Sou novo cliente e quero desconto no Combo Carreira." class="btn-buy">Contratar</a></td>
                 </tr>
                 <tr>
                     <td>Regularização MEI (DASN)</td>
-                    <td>Declaração anual e ajuste de pendências fiscais.</td>
+                    <td>Declaração anual e ajuste de pendências fiscais e comerciais.</td>
                     <td class="price-tag">R$ 40,00</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá! Regularizar meu MEI." class="btn-buy">Solicitar</a></td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Sou novo cliente e quero desconto na Regularização MEI." class="btn-buy">Solicitar</a></td>
                 </tr>
             </tbody>
         </table>
