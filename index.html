@@ -3,223 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tavares Tech Hub | Orquestração de IA & Suporte</title>
+    <title>Tavares Tech Hub | Orquestração de IA</title>
     <style>
-        :root {
-            --primary: #007bff;
-            --accent: #00d4ff;
-            --dark: #0f172a;
-            --light: #f8fafc;
-            --success: #10b981;
-            --gold: #f59e0b;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            background-color: var(--light);
-            color: #1e293b;
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--dark) 0%, #1e293b 100%);
-            color: white;
-            padding: 3rem 1rem;
-            text-align: center;
-            border-bottom: 4px solid var(--primary);
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 20px auto;
-            padding: 0 15px;
-        }
-
-        h1 { margin: 0; font-size: 2rem; letter-spacing: 1px; }
-        p.slogan { font-size: 0.9rem; color: var(--accent); margin-top: 10px; font-weight: 300; }
-
-        h2 { 
-            color: var(--dark); 
-            border-left: 5px solid var(--primary); 
-            padding-left: 15px; 
-            margin-top: 50px; 
-            text-transform: uppercase; 
-            font-size: 1.1rem;
-            background: #fff;
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-
-        .table-container { width: 100%; overflow-x: auto; background: white; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); margin-bottom: 30px; border: 1px solid #e2e8f0; }
+        :root { --primary: #007bff; --accent: #00d4ff; --dark: #0f172a; --light: #f8fafc; --success: #10b981; --gold: #f59e0b; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; margin: 0; background-color: var(--light); color: #1e293b; }
+        header { background: linear-gradient(135deg, var(--dark) 0%, #1e293b 100%); color: white; padding: 3rem 1rem; text-align: center; border-bottom: 4px solid var(--primary); }
+        .container { max-width: 1000px; margin: 20px auto; padding: 0 15px; }
+        .slogan { font-size: 0.9rem; color: var(--accent); margin-top: 10px; font-weight: 300; text-transform: uppercase; }
         
+        /* Dashboard de Agentes */
+        .dashboard { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .dashboard h3 { margin-top: 0; color: var(--dark); font-size: 1rem; border-bottom: 2px solid var(--primary); display: inline-block; padding-bottom: 5px; }
+        .agent-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 15px; }
+        .agent-card { background: #f8fafc; padding: 10px; border-radius: 8px; border-left: 4px solid var(--primary); font-size: 0.8rem; }
+        .agent-card strong { display: block; color: var(--dark); }
+        .agent-card span { color: #64748b; font-size: 0.75rem; }
+
+        h2 { color: var(--dark); border-left: 5px solid var(--primary); padding-left: 15px; margin-top: 40px; text-transform: uppercase; font-size: 1.1rem; }
+        .table-container { width: 100%; overflow-x: auto; background: white; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 30px; border: 1px solid #e2e8f0; }
         table { width: 100%; border-collapse: collapse; min-width: 600px; }
         th, td { padding: 15px; text-align: left; border-bottom: 1px solid #f1f5f9; }
-        th { background-color: #f8fafc; color: var(--secondary); font-size: 0.8rem; text-transform: uppercase; }
-        
-        .price-tag { font-weight: 700; color: var(--success); white-space: nowrap; }
-        .highlight-row { background-color: #f0f9ff; font-weight: 600; }
-        .combo-badge { background: var(--gold); color: #fff; padding: 2px 8px; border-radius: 20px; font-size: 0.7rem; }
-        .ai-badge { background: var(--primary); color: #fff; padding: 2px 8px; border-radius: 20px; font-size: 0.7rem; }
-
-        .btn-buy {
-            background-color: var(--dark);
-            color: white;
-            padding: 8px 16px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-size: 0.8rem;
-            display: inline-block;
-            transition: all 0.3s;
-            border: 1px solid transparent;
-        }
-        
-        .btn-buy:hover { background-color: var(--primary); transform: translateY(-2px); }
-
+        th { background-color: #f8fafc; font-size: 0.8rem; text-transform: uppercase; color: #64748b; }
+        .price-tag { font-weight: 700; color: var(--success); }
+        .btn-buy { background-color: var(--dark); color: white; padding: 8px 16px; text-decoration: none; border-radius: 6px; font-size: 0.8rem; transition: 0.3s; }
+        .btn-buy:hover { background-color: var(--primary); }
         footer { background: var(--dark); color: #94a3b8; text-align: center; padding: 40px 10px; margin-top: 60px; }
-        .footer-logo { color: white; font-weight: bold; font-size: 1.2rem; margin-bottom: 10px; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>TAVARES TECH HUB</h1>
-    <p class="slogan">CONECTANDO NEGÓCIOS. SIMPLIFICANDO TECNOLOGIA.</p>
+    <p class="slogan">Orquestração de Inteligência Artificial & Eficiência</p>
 </header>
 
 <div class="container">
 
-    <h2>1. Assistência e Blindagem Digital</h2>
+    <section class="dashboard">
+        <h3>🤖 Quadro de Comando de Agentes</h3>
+        <div class="agent-grid">
+            <div class="agent-card" style="border-left-color: var(--gold);"><strong>APOLO</strong><span>Pesquisa Bíblica & Resiliência</span></div>
+            <div class="agent-card"><strong>AFONSO</strong><span>Marketing & Mídia IA</span></div>
+            <div class="agent-card"><strong>ASSIS</strong><span>Gestão Fiscal & Financeira</span></div>
+            <div class="agent-card"><strong>TAVARES</strong><span>Execução Passo a Passo</span></div>
+            <div class="agent-card"><strong>AMÓS</strong><span>Ética & Direitos Sociais</span></div>
+            <div class="agent-card"><strong>DIL/THESSY</strong><span>Mentoria Tech & ADS</span></div>
+        </div>
+    </section>
+
+    <h2>1. Inteligência e Pesquisa de Fé (Apolo Agent)</h2>
     <div class="table-container">
         <table>
-            <thead>
-                <tr>
-                    <th>Serviço</th>
-                    <th>Especialidade</th>
-                    <th>Investimento</th>
-                    <th>Ação</th>
-                </tr>
-            </thead>
+            <thead><tr><th>Serviço</th><th>Execução Passo a Passo</th><th>Investimento</th><th>Ação</th></tr></thead>
             <tbody>
-                <tr class="highlight-row">
-                    <td><strong>Plano Blindagem Digital</strong></td>
-                    <td>Suporte prioritário, backup e limpeza remota.</td>
-                    <td class="price-tag">R$ 20,00/mês</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero assinar o Plano Blindagem Digital." class="btn-buy">Assinar</a></td>
+                <tr style="background:#fffbeb">
+                    <td><strong>Preparação Ágil (Nicho JW)</strong></td>
+                    <td>Síntese de reuniões, esboços de oratória e comentários objetivos.</td>
+                    <td class="price-tag">R$ 20 - 40</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Suporte Apolo para Pesquisa JW." class="btn-buy">Contratar</a></td>
                 </tr>
                 <tr>
-                    <td>Desbloqueio iOS/Android</td>
-                    <td>Remoção de contas, telas e recuperação.</td>
-                    <td class="price-tag">R$ 30 - 150</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá! Preciso de ajuda com desbloqueio." class="btn-buy">Contratar</a></td>
-                </tr>
-                <tr>
-                    <td>Remoção de Vírus/Ads</td>
-                    <td>Limpeza de malwares e notificações invasivas.</td>
-                    <td class="price-tag">R$ 20 - 30</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá! Preciso remover vírus/anúncios." class="btn-buy">Contratar</a></td>
-                </tr>
-                <tr>
-                    <td>Check-up (7 Passos)</td>
-                    <td>Otimização completa de sistema e memória.</td>
-                    <td class="price-tag">R$ 10 - 30</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero o check-up de 7 passos." class="btn-buy">Contratar</a></td>
+                    <td>Plano de Estudo Bíblico</td>
+                    <td>Organização de temas e referências cruzadas para pesquisadores.</td>
+                    <td class="price-tag">R$ 30,00</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero um Plano de Estudo Bíblico." class="btn-buy">Contratar</a></td>
                 </tr>
             </tbody>
         </table>
     </div>
 
-    <h2>2. Marketing e Orquestração de IA</h2>
+    <h2>2. Marketing e Orquestração IA (Afonso Agent)</h2>
     <div class="table-container">
         <table>
             <tbody>
-                <tr class="highlight-row">
-                    <td><strong>Mentoria IA Express <span class="ai-badge">NOVO</span></strong></td>
+                <tr style="background:#f0f9ff">
+                    <td><strong>Mentoria IA Express</strong></td>
                     <td>1 hora de consultoria para uso de IA no seu negócio.</td>
                     <td class="price-tag">R$ 120,00</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá! Tenho interesse na Mentoria IA Express." class="btn-buy">Agendar</a></td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Agendar Mentoria IA Express." class="btn-buy">Agendar</a></td>
                 </tr>
                 <tr>
                     <td>Identidade Visual Hub</td>
-                    <td>Logotipo + Slogan + Bio Estratégica.</td>
+                    <td>Criação de Logo, Slogan e Posicionamento Digital.</td>
                     <td class="price-tag">R$ 80,00</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero criar minha Identidade Visual." class="btn-buy">Contratar</a></td>
-                </tr>
-                <tr>
-                    <td>Post Recorrente (Vídeo IA)</td>
-                    <td>Mínimo 5 por semana (Contrato).</td>
-                    <td class="price-tag">R$ 5,00/cada</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero posts recorrentes em Vídeo IA." class="btn-buy">Contratar</a></td>
-                </tr>
-                <tr>
-                    <td>Post Recorrente (Estático)</td>
-                    <td>Mínimo 5 por semana (Contrato).</td>
-                    <td class="price-tag">R$ 2,50/cada</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero posts recorrentes estáticos." class="btn-buy">Contratar</a></td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Criar Identidade Visual." class="btn-buy">Contratar</a></td>
                 </tr>
             </tbody>
         </table>
     </div>
 
-    <h2>3. Suporte Comercial e Gestão</h2>
+    <h2>3. Assistência e Blindagem Digital (Tavares Agent)</h2>
     <div class="table-container">
         <table>
             <tbody>
-                <tr class="highlight-row">
-                    <td><strong>Combo "Negócio Pronto" <span class="combo-badge">BEST-SELLER</span></strong></td>
-                    <td>Cadastro em Plataformas + Proposta Comercial.</td>
-                    <td class="price-tag">R$ 70,00</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero o Combo Negócio Pronto." class="btn-buy">Contratar</a></td>
+                <tr>
+                    <td><strong>Plano Blindagem Digital</strong></td>
+                    <td>Mensal: Suporte prioritário, backup e limpeza remota de ameaças.</td>
+                    <td class="price-tag">R$ 20,00/mês</td>
+                    <td><a href="https://wa.me/5588982340081?text=Assinar Blindagem Digital." class="btn-buy">Assinar</a></td>
                 </tr>
                 <tr>
-                    <td>Regularização MEI (DASN)</td>
-                    <td>Declaração anual e ajuste de pendências.</td>
-                    <td class="price-tag">R$ 40,00</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá! Preciso regularizar meu MEI." class="btn-buy">Solicitar</a></td>
-                </tr>
-                <tr>
-                    <td>Consultoria Fiscal Avulsa</td>
-                    <td>Até 5h de orientação especializada.</td>
-                    <td class="price-tag">R$ 70 - 100</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá! Preciso de Consultoria Fiscal." class="btn-buy">Solicitar</a></td>
-                </tr>
-                <tr>
-                    <td>Consultoria (Mensal)</td>
-                    <td>Acompanhamento recorrente de gestão.</td>
-                    <td class="price-tag">R$ 10,00/hora</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero saber sobre a Consultoria Mensal." class="btn-buy">Contratar</a></td>
+                    <td>Desbloqueio iOS/Android</td>
+                    <td>Procedimento técnico para recuperação de acesso e segurança.</td>
+                    <td class="price-tag">R$ 30 - 150</td>
+                    <td><a href="https://wa.me/5588982340081?text=Ajuda com Desbloqueio." class="btn-buy">Solicitar</a></td>
                 </tr>
             </tbody>
         </table>
     </div>
 
-    <h2>4. Hub de Carreira e Documentos</h2>
+    <h2>4. Gestão, Carreira e Direitos</h2>
     <div class="table-container">
         <table>
             <tbody>
-                <tr class="highlight-row">
-                    <td><strong>Combo "Carreira Top" <span class="combo-badge">Destaque</span></strong></td>
-                    <td>Currículo Premium + LinkedIn + Simulação IA.</td>
+                <tr>
+                    <td>Combo "Carreira Top"</td>
+                    <td>Currículo Premium + LinkedIn + Simulação de Entrevista IA.</td>
                     <td class="price-tag">R$ 65,00</td>
                     <td><a href="https://wa.me/5588982340081?text=Olá! Quero o Combo Carreira Top." class="btn-buy">Contratar</a></td>
                 </tr>
                 <tr>
-                    <td>Currículo Profissional</td>
-                    <td>Formatação técnica premium.</td>
-                    <td class="price-tag">R$ 5 - 20</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero fazer meu currículo." class="btn-buy">Solicitar</a></td>
-                </tr>
-                <tr>
-                    <td>Direitos PCD/Autistas</td>
-                    <td>Passe Livre e suporte em requerimentos.</td>
-                    <td class="price-tag">R$ 30,00</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá! Suporte Direitos PCD/Autista." class="btn-buy">Solicitar</a></td>
-                </tr>
-                <tr>
-                    <td>Contrato Simples</td>
-                    <td>Redação técnica de documentos.</td>
-                    <td class="price-tag">R$ 20,00</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá! Preciso de um contrato." class="btn-buy">Solicitar</a></td>
+                    <td>Regularização MEI (DASN)</td>
+                    <td>Declaração anual e ajuste de pendências fiscais.</td>
+                    <td class="price-tag">R$ 40,00</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Regularizar meu MEI." class="btn-buy">Solicitar</a></td>
                 </tr>
             </tbody>
         </table>
@@ -228,9 +135,9 @@
 </div>
 
 <footer>
-    <div class="footer-logo">TAVARES TECH HUB</div>
+    <div style="font-weight:bold; color:#fff; margin-bottom:10px;">TAVARES TECH HUB</div>
     <p>Tiago Tavares | Orquestrador de Agentes de IA</p>
-    <p style="font-size: 0.7rem; margin-top: 20px;">© 2026 - Soluções Mobile-First e Consultoria Estratégica.</p>
+    <p style="font-size: 0.7rem;">Operação 100% Mobile | Protocolo Erro Zero</p>
 </footer>
 
 </body>
