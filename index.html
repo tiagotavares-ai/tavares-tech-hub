@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tavares Tech Hub | Orquestração de IA</title>
     <style>
-        :root { --primary: #007bff; --accent: #00d4ff; --dark: #0f172a; --light: #f8fafc; --success: #10b981; --gold: #f59e0b; --promo: #e11d48; }
+        :root { --primary: #007bff; --accent: #00d4ff; --dark: #0f172a; --light: #f8fafc; --success: #10b981; --gold: #f59e0b; }
         body { font-family: 'Inter', sans-serif; line-height: 1.6; margin: 0; background-color: var(--light); color: #1e293b; }
         header { background: linear-gradient(135deg, var(--dark) 0%, #1e293b 100%); color: white; padding: 3rem 1rem; text-align: center; border-bottom: 4px solid var(--primary); }
         .container { max-width: 1000px; margin: 20px auto; padding: 0 15px; }
         .slogan { font-size: 0.9rem; color: var(--accent); margin-top: 10px; font-weight: 300; text-transform: uppercase; }
         
-        /* Banner de Promoção */
-        .promo-banner { background: var(--promo); color: white; text-align: center; padding: 10px; border-radius: 8px; margin-bottom: 20px; font-weight: bold; font-size: 0.9rem; border: 2px dashed #fff; }
+        /* Banner de Crescimento */
+        .promo-banner { background: var(--dark); color: white; text-align: center; padding: 15px; border-radius: 12px; margin-bottom: 30px; border: 2px dashed var(--accent); font-size: 0.85rem; }
 
         /* Dashboard de Agentes */
         .dashboard { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
@@ -20,16 +20,21 @@
         .agent-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 15px; }
         .agent-card { background: #f8fafc; padding: 10px; border-radius: 8px; border-left: 4px solid var(--primary); font-size: 0.8rem; }
         .agent-card strong { display: block; color: var(--dark); }
-        .agent-card span { color: #64748b; font-size: 0.75rem; }
 
+        /* Tabelas e Títulos */
         h2 { color: var(--dark); border-left: 5px solid var(--primary); padding-left: 15px; margin-top: 40px; text-transform: uppercase; font-size: 1.1rem; }
         .table-container { width: 100%; overflow-x: auto; background: white; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 30px; border: 1px solid #e2e8f0; }
         table { width: 100%; border-collapse: collapse; min-width: 600px; }
         th, td { padding: 15px; text-align: left; border-bottom: 1px solid #f1f5f9; }
         th { background-color: #f8fafc; font-size: 0.8rem; text-transform: uppercase; color: #64748b; }
         .price-tag { font-weight: 700; color: var(--success); }
-        .btn-buy { background-color: var(--dark); color: white; padding: 8px 16px; text-decoration: none; border-radius: 6px; font-size: 0.8rem; transition: 0.3s; }
-        .btn-buy:hover { background-color: var(--primary); }
+        .btn-buy { background-color: var(--primary); color: white; padding: 8px 16px; text-decoration: none; border-radius: 6px; font-size: 0.8rem; transition: 0.3s; }
+
+        /* Política de Pagamento */
+        .payment-policy { background: #fffbeb; border: 1px solid #fef3c7; border-radius: 12px; padding: 20px; margin-top: 20px; }
+        .payment-policy h4 { margin-top: 0; color: #92400e; font-size: 0.9rem; text-transform: uppercase; }
+        .payment-policy ul { font-size: 0.8rem; color: #78350f; padding-left: 20px; margin-bottom: 0; }
+
         footer { background: var(--dark); color: #94a3b8; text-align: center; padding: 40px 10px; margin-top: 60px; }
     </style>
 </head>
@@ -43,7 +48,8 @@
 <div class="container">
 
     <div class="promo-banner">
-        🚀 PROMOÇÃO DE BOAS-VINDAS: Todo novo cliente tem de 10% a 90% de DESCONTO na primeira contratação!
+        <strong>🔍 DIAGNÓSTICO GRATUITO:</strong> Análise de viabilidade via IA em 5 min! <br>
+        <strong>🤝 INDIQUE E GANHE:</strong> Clientes ganham R$ 10 por indicação fechada (limite R$ 100).
     </div>
 
     <section class="dashboard">
@@ -63,81 +69,32 @@
         <table>
             <thead><tr><th>Serviço</th><th>Função (Execução)</th><th>Investimento</th><th>Ação</th></tr></thead>
             <tbody>
-                <tr style="background:#fffbeb">
+                <tr>
                     <td><strong>Preparação Ágil (Nicho JW)</strong></td>
-                    <td>Síntese para reuniões, esboços de oratória e comentários objetivos.</td>
+                    <td>Síntese para reuniões e esboços de oratória objetivos.</td>
                     <td class="price-tag">R$ 20 - 40</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá! Sou novo cliente e quero o desconto para Pesquisa JW." class="btn-buy">Contratar</a></td>
-                </tr>
-                <tr>
-                    <td>Plano de Estudo Bíblico</td>
-                    <td>Organização de temas e referências cruzadas para pesquisadores.</td>
-                    <td class="price-tag">R$ 30,00</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá! Sou novo cliente e quero o desconto no Plano de Estudo." class="btn-buy">Contratar</a></td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero um Diagnóstico Gratuito para Pesquisa JW." class="btn-buy">Solicitar Diagnóstico</a></td>
                 </tr>
             </tbody>
         </table>
     </div>
 
-    <h2>2. MARKETING E ORQUESTRAÇÃO DE IA</h2>
-    <div class="table-container">
-        <table>
-            <tbody>
-                <tr style="background:#f0f9ff">
-                    <td><strong>Mentoria IA Express</strong></td>
-                    <td>1 hora de consultoria para uso de IA no seu negócio.</td>
-                    <td class="price-tag">R$ 120,00</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá! Sou novo cliente e quero desconto na Mentoria IA." class="btn-buy">Agendar</a></td>
-                </tr>
-                <tr>
-                    <td>Identidade Visual Hub</td>
-                    <td>Criação de Logo, Slogan e Posicionamento Digital Estratégico.</td>
-                    <td class="price-tag">R$ 80,00</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá! Sou novo cliente e quero desconto na Identidade Visual." class="btn-buy">Contratar</a></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <section class="payment-policy">
+        <h4>💳 Política de Pagamento e Compromisso</h4>
+        <ul>
+            <li><strong>Métodos Aceitos:</strong> Exclusivamente via <strong>Pix</strong> ou <strong>Dinheiro</strong>.</li>
+            <li><strong>Sinal de Execução:</strong> Após o diagnóstico gratuito, é necessário o pagamento de <strong>50% do valor total</strong> para iniciar o serviço.</li>
+            <li><strong>Entrega Final:</strong> Os <strong>50% restantes</strong> devem ser pagos imediatamente após a entrega do serviço concluído.</li>
+            <li><strong>Transparência:</strong> O Protocolo Erro Zero garante a execução fiel ao diagnóstico aprovado.</li>
+        </ul>
+    </section>
 
-    <h2>3. ASSISTÊNCIA E BLINDAGEM DIGITAL</h2>
-    <div class="table-container">
-        <table>
-            <tbody>
-                <tr>
-                    <td><strong>Plano Blindagem Digital</strong></td>
-                    <td>Mensal: Suporte prioritário, backup e limpeza remota de ameaças.</td>
-                    <td class="price-tag">R$ 20,00/mês</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero assinar a Blindagem com desconto de novo cliente." class="btn-buy">Assinar</a></td>
-                </tr>
-                <tr>
-                    <td>Desbloqueio iOS/Android</td>
-                    <td>Procedimento técnico passo a passo para recuperação de acesso.</td>
-                    <td class="price-tag">R$ 30 - 150</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá! Sou novo cliente e quero desconto no Desbloqueio." class="btn-buy">Solicitar</a></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <h2>4. GESTÃO, CARREIRA E DIREITOS SOCIAIS</h2>
-    <div class="table-container">
-        <table>
-            <tbody>
-                <tr>
-                    <td><strong>Combo "Carreira Top"</strong></td>
-                    <td>Currículo Premium + LinkedIn + Simulação de Entrevista via IA.</td>
-                    <td class="price-tag">R$ 65,00</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá! Sou novo cliente e quero desconto no Combo Carreira." class="btn-buy">Contratar</a></td>
-                </tr>
-                <tr>
-                    <td>Regularização MEI (DASN)</td>
-                    <td>Declaração anual e ajuste de pendências fiscais e comerciais.</td>
-                    <td class="price-tag">R$ 40,00</td>
-                    <td><a href="https://wa.me/5588982340081?text=Olá! Sou novo cliente e quero desconto na Regularização MEI." class="btn-buy">Solicitar</a></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <section class="dashboard" style="border-left: 4px solid var(--success); margin-top: 40px;">
+        <h3>🤝 Programa Indique e Ganhe</h3>
+        <p style="font-size: 0.8rem; color: #1e293b;">
+            Ganhe <strong>R$ 10,00 de crédito</strong> por cada indicação que converter em serviço pago. Acumule até R$ 100,00 em descontos para usar em qualquer orquestração do Hub.
+        </p>
+    </section>
 
 </div>
 
