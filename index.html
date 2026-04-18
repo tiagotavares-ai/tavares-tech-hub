@@ -11,26 +11,23 @@
         .container { max-width: 1000px; margin: 20px auto; padding: 0 15px; }
         .slogan { font-size: 0.9rem; color: var(--accent); margin-top: 10px; font-weight: 300; text-transform: uppercase; }
         
-        /* Banner de Crescimento */
         .promo-banner { background: var(--dark); color: white; text-align: center; padding: 15px; border-radius: 12px; margin-bottom: 30px; border: 2px dashed var(--accent); font-size: 0.85rem; }
 
-        /* Dashboard de Agentes */
         .dashboard { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-bottom: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .dashboard h3 { margin-top: 0; color: var(--dark); font-size: 1rem; border-bottom: 2px solid var(--primary); display: inline-block; padding-bottom: 5px; }
+        .dashboard h3 { margin-top: 0; color: var(--dark); font-size: 1rem; border-bottom: 2px solid var(--primary); display: inline-block; padding-bottom: 5px; text-transform: uppercase; }
         .agent-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 15px; }
         .agent-card { background: #f8fafc; padding: 10px; border-radius: 8px; border-left: 4px solid var(--primary); font-size: 0.8rem; }
-        .agent-card strong { display: block; color: var(--dark); }
+        .agent-card strong { display: block; color: var(--dark); text-transform: uppercase; margin-bottom: 2px; }
+        .agent-card span { color: #64748b; font-size: 0.75rem; }
 
-        /* Tabelas e Títulos */
         h2 { color: var(--dark); border-left: 5px solid var(--primary); padding-left: 15px; margin-top: 40px; text-transform: uppercase; font-size: 1.1rem; }
         .table-container { width: 100%; overflow-x: auto; background: white; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 30px; border: 1px solid #e2e8f0; }
         table { width: 100%; border-collapse: collapse; min-width: 600px; }
         th, td { padding: 15px; text-align: left; border-bottom: 1px solid #f1f5f9; }
         th { background-color: #f8fafc; font-size: 0.8rem; text-transform: uppercase; color: #64748b; }
         .price-tag { font-weight: 700; color: var(--success); }
-        .btn-buy { background-color: var(--primary); color: white; padding: 8px 16px; text-decoration: none; border-radius: 6px; font-size: 0.8rem; transition: 0.3s; }
+        .btn-buy { background-color: var(--primary); color: white; padding: 8px 16px; text-decoration: none; border-radius: 6px; font-size: 0.8rem; transition: 0.3s; text-align: center; display: inline-block; }
 
-        /* Política de Pagamento */
         .payment-policy { background: #fffbeb; border: 1px solid #fef3c7; border-radius: 12px; padding: 20px; margin-top: 20px; }
         .payment-policy h4 { margin-top: 0; color: #92400e; font-size: 0.9rem; text-transform: uppercase; }
         .payment-policy ul { font-size: 0.8rem; color: #78350f; padding-left: 20px; margin-bottom: 0; }
@@ -53,14 +50,14 @@
     </div>
 
     <section class="dashboard">
-        <h3>🤖 Quadro de Comando de Agentes</h3>
+        <h3>✅ Serviços Disponíveis</h3>
         <div class="agent-grid">
-            <div class="agent-card" style="border-left-color: var(--gold);"><strong>APOLO</strong><span>Pesquisa Bíblica & Resiliência</span></div>
-            <div class="agent-card"><strong>AFONSO</strong><span>Marketing & Mídia IA</span></div>
-            <div class="agent-card"><strong>ASSIS</strong><span>Gestão Comercial & Fiscal</span></div>
-            <div class="agent-card"><strong>TAVARES</strong><span>Execução Passo a Passo</span></div>
-            <div class="agent-card"><strong>AMÓS</strong><span>Ética & Direitos Sociais</span></div>
-            <div class="agent-card"><strong>DIL/THESSY</strong><span>Mentoria Tech & ADS</span></div>
+            <div class="agent-card" style="border-left-color: var(--gold);"><strong>Pesquisa de Fé</strong><span>Estudos Bíblicos & Resiliência</span></div>
+            <div class="agent-card"><strong>Marketing IA</strong><span>Mídia & Posicionamento Digital</span></div>
+            <div class="agent-card"><strong>Gestão Fiscal</strong><span>Comercial, MEI & Finanças</span></div>
+            <div class="agent-card"><strong>Assistência Mobile</strong><span>Execução Técnica Passo a Passo</span></div>
+            <div class="agent-card"><strong>Direitos Sociais</strong><span>Ética & Suporte PCD/Autista</span></div>
+            <div class="agent-card"><strong>Mentoria Tech</strong><span>Suporte em ADS & Tecnologia</span></div>
         </div>
     </section>
 
@@ -69,11 +66,83 @@
         <table>
             <thead><tr><th>Serviço</th><th>Função (Execução)</th><th>Investimento</th><th>Ação</th></tr></thead>
             <tbody>
-                <tr>
+                <tr style="background:#fffbeb">
                     <td><strong>Preparação Ágil (Nicho JW)</strong></td>
-                    <td>Síntese para reuniões e esboços de oratória objetivos.</td>
+                    <td>Síntese para reuniões e esboços de oratória.</td>
                     <td class="price-tag">R$ 20 - 40</td>
                     <td><a href="https://wa.me/5588982340081?text=Olá! Quero um Diagnóstico Gratuito para Pesquisa JW." class="btn-buy">Solicitar Diagnóstico</a></td>
+                </tr>
+                <tr>
+                    <td>Plano de Estudo Bíblico</td>
+                    <td>Organização de temas e referências cruzadas.</td>
+                    <td class="price-tag">R$ 30,00</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero um Diagnóstico Gratuito para Plano de Estudo." class="btn-buy">Solicitar Diagnóstico</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>2. MARKETING E ORQUESTRAÇÃO DE IA</h2>
+    <div class="table-container">
+        <table>
+            <tbody>
+                <tr style="background:#f0f9ff">
+                    <td><strong>Mentoria IA Express</strong></td>
+                    <td>1 hora de consultoria para uso de IA no negócio.</td>
+                    <td class="price-tag">R$ 120,00</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero um Diagnóstico Gratuito para Mentoria IA." class="btn-buy">Solicitar Diagnóstico</a></td>
+                </tr>
+                <tr>
+                    <td>Identidade Visual Hub</td>
+                    <td>Criação de Logo, Slogan e Posicionamento.</td>
+                    <td class="price-tag">R$ 80,00</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero um Diagnóstico Gratuito para Identidade Visual." class="btn-buy">Solicitar Diagnóstico</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>3. ASSISTÊNCIA E BLINDAGEM DIGITAL</h2>
+    <div class="table-container">
+        <table>
+            <tbody>
+                <tr>
+                    <td><strong>Plano Blindagem Digital</strong></td>
+                    <td>Suporte prioritário, backup e limpeza de ameaças.</td>
+                    <td class="price-tag">R$ 20,00/mês</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero um Diagnóstico para o Plano Blindagem." class="btn-buy">Solicitar Diagnóstico</a></td>
+                </tr>
+                <tr>
+                    <td>Desbloqueio iOS/Android</td>
+                    <td>Recuperação de acesso e segurança mobile.</td>
+                    <td class="price-tag">R$ 30 - 150</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero um Diagnóstico para Desbloqueio Mobile." class="btn-buy">Solicitar Diagnóstico</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>4. GESTÃO, CARREIRA E DIREITOS SOCIAIS</h2>
+    <div class="table-container">
+        <table>
+            <tbody>
+                <tr>
+                    <td><strong>Combo "Carreira Top"</strong></td>
+                    <td>Currículo Premium + LinkedIn + Simulação de Entrevista.</td>
+                    <td class="price-tag">R$ 65,00</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero um Diagnóstico para o Combo Carreira." class="btn-buy">Solicitar Diagnóstico</a></td>
+                </tr>
+                <tr>
+                    <td>Regularização MEI (DASN)</td>
+                    <td>Declaração anual e ajuste de pendências fiscais.</td>
+                    <td class="price-tag">R$ 40,00</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero um Diagnóstico para Regularização MEI." class="btn-buy">Solicitar Diagnóstico</a></td>
+                </tr>
+                <tr>
+                    <td>Suporte em Direitos PCD/Autistas</td>
+                    <td>Orientação e redação técnica para requerimentos.</td>
+                    <td class="price-tag">R$ 30,00</td>
+                    <td><a href="https://wa.me/5588982340081?text=Olá! Quero um Diagnóstico para Direitos PCD." class="btn-buy">Solicitar Diagnóstico</a></td>
                 </tr>
             </tbody>
         </table>
@@ -85,14 +154,13 @@
             <li><strong>Métodos Aceitos:</strong> Exclusivamente via <strong>Pix</strong> ou <strong>Dinheiro</strong>.</li>
             <li><strong>Sinal de Execução:</strong> Após o diagnóstico gratuito, é necessário o pagamento de <strong>50% do valor total</strong> para iniciar o serviço.</li>
             <li><strong>Entrega Final:</strong> Os <strong>50% restantes</strong> devem ser pagos imediatamente após a entrega do serviço concluído.</li>
-            <li><strong>Transparência:</strong> O Protocolo Erro Zero garante a execução fiel ao diagnóstico aprovado.</li>
         </ul>
     </section>
 
     <section class="dashboard" style="border-left: 4px solid var(--success); margin-top: 40px;">
         <h3>🤝 Programa Indique e Ganhe</h3>
         <p style="font-size: 0.8rem; color: #1e293b;">
-            Ganhe <strong>R$ 10,00 de crédito</strong> por cada indicação que converter em serviço pago. Acumule até R$ 100,00 em descontos para usar em qualquer orquestração do Hub.
+            Ganhe <strong>R$ 10,00 de crédito</strong> por cada indicação que converter em serviço pago. Acumule até R$ 100,00 em descontos para usar no Hub.
         </p>
     </section>
 
