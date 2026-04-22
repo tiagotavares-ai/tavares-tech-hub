@@ -3,52 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tiago Tavares | Especialista em Softwares</title>
+    <title>Tiago Tavares | Especialista em Softwares & IA</title>
     <style>
         :root { --primary: #007bff; --accent: #00d4ff; --dark: #0f172a; --light: #f8fafc; --success: #10b981; --gold: #f59e0b; --danger: #ef4444; }
         body { font-family: 'Inter', sans-serif; line-height: 1.6; margin: 0; background-color: var(--light); color: #1e293b; }
         
         header { background: linear-gradient(135deg, var(--dark) 0%, #1e293b 100%); color: white; padding: 3rem 1rem; text-align: center; border-bottom: 4px solid var(--primary); }
         .hero { padding: 40px 15px; text-align: center; background: white; margin-bottom: 20px; border-bottom: 1px solid #e2e8f0; }
-        .hero h2 { color: var(--dark); font-size: 1.5rem; margin-bottom: 15px; text-transform: uppercase; }
+        .hero h2 { color: var(--dark); font-size: 1.4rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
 
         .container { max-width: 1000px; margin: 20px auto; padding: 0 15px; }
         
         .promo-banner { background: var(--dark); color: white; text-align: center; padding: 15px; border-radius: 12px; margin-bottom: 30px; border: 2px dashed var(--accent); font-size: 0.85rem; }
 
+        /* Estrutura das Portas de Entrada */
         .doors-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin-bottom: 40px; }
-        .door-card { background: white; border: 1px solid #e2e8f0; border-radius: 16px; padding: 25px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); border-top: 6px solid var(--primary); }
+        .door-card { background: white; border: 1px solid #e2e8f0; border-radius: 16px; padding: 25px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); border-top: 6px solid var(--primary); transition: 0.3s; }
         .door-card h3 { margin-top: 0; color: var(--dark); font-size: 1.2rem; text-transform: uppercase; }
         .door-card .tagline { font-style: italic; color: var(--primary); font-size: 0.9rem; display: block; margin-bottom: 15px; font-weight: 600; }
         
         .service-list { list-style: none; padding: 0; margin-bottom: 25px; }
         .service-list li { padding: 10px 0; border-bottom: 1px solid #f1f5f9; font-size: 0.85rem; display: flex; align-items: flex-start; gap: 8px; }
-        .service-list li::before { content: '✔️'; color: var(--success); }
+        .service-list li::before { content: '⚡'; color: var(--gold); }
 
         .btn { display: block; text-align: center; padding: 14px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: 0.3s; }
         .btn-primary { background: var(--dark); color: white; }
         .btn-accent { background: var(--primary); color: white; }
 
-        .warning-box { background: #fff1f2; border: 1px solid #fecaca; border-radius: 10px; padding: 15px; margin-bottom: 30px; font-size: 0.8rem; color: var(--danger); }
+        .warning-box { background: #fff1f2; border: 1px solid #fecaca; border-radius: 10px; padding: 15px; margin-bottom: 30px; font-size: 0.8rem; color: var(--danger); text-align: center; }
+
+        /* Grid de Especialistas (Ecosistema) */
+        .section-title { color: var(--dark); border-left: 5px solid var(--primary); padding-left: 15px; margin: 40px 0 20px; text-transform: uppercase; font-size: 1rem; font-weight: bold; }
+        .agent-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
+        .agent-card { background: white; padding: 15px; border-radius: 10px; border: 1px solid #e2e8f0; font-size: 0.75rem; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .agent-card strong { display: block; color: var(--primary); margin-bottom: 5px; text-transform: uppercase; }
 
         .guidelines { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; margin-top: 30px; }
-        .guidelines h4 { margin-top: 0; color: var(--dark); font-size: 0.9rem; text-transform: uppercase; border-bottom: 2px solid var(--primary); display: inline-block; padding-bottom: 3px; }
-        
-        footer { background: var(--dark); color: #94a3b8; text-align: center; padding: 40px 10px; margin-top: 60px; font-size: 0.8rem; }
+        .guidelines h4 { margin-top: 0; color: var(--dark); font-size: 0.9rem; text-transform: uppercase; border-bottom: 2px solid var(--primary); display: inline-block; padding-bottom: 3px; margin-bottom: 15px; }
+        .guidelines ul { font-size: 0.8rem; padding-left: 20px; color: #475569; list-style-type: square; }
+        .guidelines li { margin-bottom: 8px; }
+
+        footer { background: var(--dark); color: #94a3b8; text-align: center; padding: 40px 10px; margin-top: 60px; font-size: 0.8rem; border-top: 4px solid var(--primary); }
     </style>
 </head>
 <body>
 
 <header>
     <h1>TIAGO TAVARES</h1>
-    <p style="color: var(--accent); font-weight: 300; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem;">Especialista em Softwares de Celulares</p>
+    <p style="color: var(--accent); font-weight: 300; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem;">Especialista em Softwares & Orquestração de IA</p>
 </header>
 
 <section class="hero">
     <div class="container">
-        <h2>Recuperação e Remoção de Contas com Precisão Técnica.</h2>
-        <p style="color: #475569; max-width: 750px; margin: 0 auto; font-size: 0.95rem;">
-            Orquestração de soluções digitais para desbloqueio e segurança. Se o seu problema é software, nós temos a chave.
+        <h2>Seu Celular é sua Ferramenta de Trabalho. Nós o mantemos operando.</h2>
+        <p style="color: #475569; max-width: 800px; margin: 0 auto; font-size: 0.95rem;">
+            Especialista em recuperação de acessos críticos e remoção de bloqueios de software. Unimos a inteligência dos agentes digitais com a execução técnica presencial.
         </p>
     </div>
 </section>
@@ -56,45 +65,57 @@
 <div class="container">
 
     <div class="promo-banner">
-        <strong>🤝 INDIQUE UM AMIGO:</strong> Ganhe R$ 10 de crédito por indicação que fechar serviço!
+        <strong>🔍 AVALIAÇÃO GRATUITA:</strong> Analisamos seu caso em 5 minutos via WhatsApp! <br>
+        <strong>🤝 PROGRAMA DE INDICAÇÃO:</strong> Ganhe R$ 10 de crédito por cada serviço fechado por indicação.
     </div>
 
     <div class="doors-grid">
         <div class="door-card" style="border-top-color: var(--gold);">
-            <h3>🛡️ Recuperação e Remoção</h3>
-            <span class="tagline">"Nós devolvemos o controle do aparelho a você."</span>
+            <h3>🛡️ Execução e Assistência</h3>
+            <span class="tagline">"Recuperação imediata do seu controle digital."</span>
             <ul class="service-list">
-                <li><strong>Recuperação de Contas:</strong> Google, Gov.br, E-mails e Aplicativos de Banco.</li>
-                <li><strong>Remoção de Bloqueios:</strong> iCloud (Apple), FRP (Google) e qualquer outra marca.</li>
-                <li><strong>Limpeza e Performance:</strong> Remoção de vírus e otimização total do sistema.</li>
-                <li><strong>Segurança Especializada:</strong> Blindagem contra anúncios e notificações invasivas.</li>
+                <li><strong>Recuperação de Contas:</strong> Google, Gov.br, E-mails e Apps Bancários.</li>
+                <li><strong>Remoção de Bloqueios:</strong> iCloud, FRP (Google), Samsung Account e Senhas.</li>
+                <li><strong>Otimização de Performance:</strong> Limpeza técnica de memória e aceleração de sistema.</li>
+                <li><strong>Blindagem e Segurança:</strong> Remoção de vírus, malwares e anúncios invasivos.</li>
             </ul>
-            <a href="https://wa.me/5588982340081?text=Olá Tiago! Preciso de uma avaliação para Recuperação/Remoção de conta." class="btn btn-primary">SOLICITAR AVALIAÇÃO GRÁTIS</a>
+            <a href="https://wa.me/5588982340081?text=Olá Tiago! Preciso de uma Avaliação Gratuita para meu Celular/Conta." class="btn btn-primary">CHAMAR NO PRIVADO</a>
         </div>
 
         <div class="door-card" style="border-top-color: var(--accent);">
             <h3>🤖 Fábrica de Agentes e Gems</h3>
-            <span class="tagline">"IA personalizada para sua rotina industrial."</span>
+            <span class="tagline">"Construímos a IA que trabalha por você e sua equipe."</span>
             <ul class="service-list">
-                <li><strong>Agentes de Vendas:</strong> Automação de atendimento comercial local.</li>
-                <li><strong>Gems de Pesquisa:</strong> Assistentes para estudos bíblicos ou acadêmicos.</li>
-                <li><strong>Mentores de Carreira:</strong> IA treinada para gestão de equipes e liderança.</li>
-                <li><strong>Orquestração de Fluxos:</strong> Automatize tarefas repetitivas no seu celular.</li>
+                <li><strong>Agentes de Vendas:</strong> Automação de atendimento para comércios locais.</li>
+                <li><strong>Gems de Pesquisa:</strong> Assistentes focados em estudos bíblicos ou acadêmicos.</li>
+                <li><strong>Eficiência Industrial:</strong> Automações de tarefas para Team Leaders e Gestores.</li>
+                <li><strong>Mentoria Tech:</strong> Suporte especializado em ADS, Lógica e Sistemas.</li>
             </ul>
-            <a href="https://wa.me/5588982340081?text=Olá! Quero encomendar meu Agente/Gem personalizado." class="btn btn-accent">ENCOMENDAR MEU AGENTE</a>
+            <a href="https://wa.me/5588982340081?text=Olá! Quero encomendar meu Agente/Gem personalizado para meu negócio." class="btn btn-accent">ENCOMENDAR MEU AGENTE</a>
         </div>
     </div>
 
     <div class="warning-box">
-        <strong>⚠️ AVISO TÉCNICO:</strong> Antes de qualquer intervenção de software, realize o backup dos seus dados. A Tavares Tech Hub segue o Protocolo Erro Zero, mas não se responsabiliza por perdas de dados em processos de remoção.
+        <strong>⚠️ AVISO TÉCNICO:</strong> O backup dos seus dados é de sua responsabilidade antes de qualquer procedimento. Seguimos o <strong>Protocolo Erro Zero</strong> para máxima segurança.
+    </div>
+
+    <h3 class="section-title">🤖 Inteligência por trás do Hub (Especialistas)</h3>
+    <div class="agent-grid">
+        <div class="agent-card"><strong>AFONSO</strong><span>Estratégia & Vendas</span></div>
+        <div class="agent-card"><strong>AMÓS</strong><span>Segurança & Ética</span></div>
+        <div class="agent-card"><strong>ASSIS</strong><span>Gestão & Fluxos</span></div>
+        <div class="agent-card"><strong>TAVARES</strong><span>Infra Técnica Mobile</span></div>
+        <div class="agent-card"><strong>THESSY/DIL</strong><span>Lógica & Acadêmico</span></div>
+        <div class="agent-card"><strong>APOLO</strong><span>Análise & Resiliência</span></div>
     </div>
 
     <section class="guidelines">
         <h4>⚙️ Diretrizes Operacionais</h4>
-        <ul style="font-size: 0.8rem; padding-left: 20px; color: #475569;">
-            <li><strong>PROTOCOLO ERRO ZERO:</strong> Avaliação gratuita obrigatória via WhatsApp antes da execução.</li>
-            <li><strong>ATENDIMENTO HÍBRIDO:</strong> Diagnóstico online com execução presencial (Sobral/Massapê).</li>
-            <li><strong>PAGAMENTO:</strong> 50% de sinal no pedido | 50% na entrega final (Pix ou Dinheiro).</li>
+        <ul>
+            <li><strong>PROTOCOLO ERRO ZERO:</strong> Avaliação obrigatória e gratuita via WhatsApp antes de qualquer execução.</li>
+            <li><strong>OPERAÇÃO HÍBRIDA:</strong> Diagnóstico online com suporte presencial em <strong>Sobral e Massapê (Mumbaba)</strong>.</li>
+            <li><strong>PAGAMENTO SEGURO:</strong> 50% de sinal para início do serviço | 50% na entrega final (Pix ou Dinheiro).</li>
+            <li><strong>FOCO EM RESULTADO:</strong> Soluções pensadas para aumentar a produtividade de Líderes e Empreendedores.</li>
         </ul>
     </section>
 
@@ -102,8 +123,8 @@
 
 <footer>
     <div style="font-weight:bold; color:#fff; margin-bottom:10px;">TAVARES TECH HUB</div>
-    <p>Tiago Tavares | Orquestrador de IA & Especialista em Softwares</p>
-    <p>Operação 100% Mobile | Protocolo Erro Zero</p>
+    <p>Tiago Tavares | Especialista em Softwares & Orquestrador de IA</p>
+    <p>Operação 100% Mobile | Termux & Spck Editor</p>
 </footer>
 
 </body>
