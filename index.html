@@ -76,61 +76,11 @@
             object-fit: cover;
         }
 
-        /* Painel de Categorias Rápidas */
-        .painel-bio {
-            background: var(--bg-card);
-            border: 1px solid var(--borda);
-            padding: 20px;
-            border-radius: 12px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .bio-pilar {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: var(--texto-principal);
-        }
-
-        .bio-pilar span {
-            font-size: 1.1rem;
-        }
-
-        /* Botão de Chamada para Ação */
-        .btn-cta {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            padding: 16px;
-            background-color: var(--cor-botao);
-            color: #ffffff;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(2, 132, 199, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .btn-cta:hover {
-            background-color: var(--cor-botao-hover);
-            transform: translateY(-1px);
-            box-shadow: 0 6px 20px rgba(2, 132, 199, 0.4);
-        }
-
         /* Vitrine de Soluções */
         .vitrine-servicos {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 20px;
         }
 
         .secao-titulo {
@@ -150,14 +100,13 @@
             padding: 20px;
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 10px;
             transition: all 0.2s ease;
         }
 
         .card-servico:hover {
             border-color: var(--borda-hover);
             background-color: var(--bg-card-hover);
-            transform: scale(1.01);
         }
 
         .card-servico h3 {
@@ -176,7 +125,7 @@
         }
 
         .lista-items {
-            margin-top: 4px;
+            margin-top: 2px;
             padding-left: 15px;
             display: flex;
             flex-direction: column;
@@ -199,9 +148,35 @@
             font-weight: bold;
         }
 
+        /* Botão de Ação Integrado ao Card */
+        .btn-card-cta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 12px;
+            background-color: var(--cor-botao);
+            color: #ffffff;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            text-align: center;
+            margin-top: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 10px rgba(2, 132, 199, 0.2);
+        }
+
+        .btn-card-cta:hover {
+            background-color: var(--cor-botao-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 15px rgba(2, 132, 199, 0.3);
+        }
+
         /* Rodapé */
         .hub-footer {
-            margin-top: 15px;
+            margin-top: 10px;
             text-align: center;
             font-size: 0.75rem;
             color: var(--texto-secundario);
@@ -222,20 +197,9 @@
 
         <header class="brand-header">
             <div class="logo-wrapper">
-                <img src="Logomarca.jpg" alt="Tavares Tech Hub Logomarca">
+                <img src="logo.jpg.jpg" alt="Tavares Tech Hub Logomarca">
             </div>
         </header>
-
-        <section class="painel-bio">
-            <div class="bio-pilar"><span>🤖</span> Expert Inteligência Artificial</div>
-            <div class="bio-pilar"><span>📱</span> Técnico Mobile-First</div>
-            <div class="bio-pilar"><span>🤵</span> Mentor Negócios & Carreira</div>
-            <div class="bio-pilar"><span>🗣️</span> Consultor Vendas & Marketing</div>
-        </section>
-
-        <a href="https://wa.me/5588982340081" target="_blank" class="btn-cta">
-            💬 Solicitar Serviço
-        </a>
 
         <main class="vitrine-servicos">
             <h2 class="secao-titulo">Nossas Soluções Operacionais</h2>
@@ -247,6 +211,9 @@
                     <li>Criação de agentes personalizados</li>
                     <li>Automação de processos operacionais com IA</li>
                 </ul>
+                <a href="https://wa.me/5588982340081" target="_blank" class="btn-card-cta">
+                    💬 Solicitar Serviço
+                </a>
             </div>
 
             <div class="card-servico">
@@ -258,6 +225,9 @@
                     <li>Limpeza e Otimização de Memória Celular</li>
                     <li>Desbloqueio de Tela</li>
                 </ul>
+                <a href="https://wa.me/5588982340081" target="_blank" class="btn-card-cta">
+                    💬 Solicitar Serviço
+                </a>
             </div>
 
             <div class="card-servico">
@@ -268,6 +238,9 @@
                     <li>Consultoria de Negócio (Operação 100% via Celular)</li>
                     <li>Auditoria Fiscal e Administrativa</li>
                 </ul>
+                <a href="https://wa.me/5588982340081" target="_blank" class="btn-card-cta">
+                    💬 Solicitar Serviço
+                </a>
             </div>
 
             <div class="card-servico">
@@ -278,6 +251,9 @@
                     <li>Divulgação estratégica de marcas e produtos</li>
                     <li>Estruturação e fechamento de Vendas</li>
                 </ul>
+                <a href="https://wa.me/5588982340081" target="_blank" class="btn-card-cta">
+                    💬 Solicitar Serviço
+                </a>
             </div>
         </main>
 
