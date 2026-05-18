@@ -6,29 +6,29 @@
     <title>Tiago | Tavares Tech Hub</title>
     <style>
         :root {
-            --bg-principal: #090d16;
-            --bg-card: #121824;
-            --bg-card-hover: #1a2335;
-            --texto-principal: #f0f4f8;
+            --bg-principal: #0a0f1d;
+            --bg-card: #131a30;
+            --bg-card-hover: #1c2646;
+            --texto-principal: #f1f5f9;
             --texto-secundario: #94a3b8;
             --cor-acento: #38bdf8;
             --cor-botao: #1d4ed8;
             --cor-botao-hover: #2563eb;
-            --borda: rgba(255, 255, 255, 0.08);
+            --borda: rgba(255, 255, 255, 0.06);
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
         body {
             background-color: var(--bg-principal);
             color: var(--texto-principal);
             line-height: 1.6;
-            padding: 20px 15px;
+            padding: 25px 15px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -36,31 +36,24 @@
 
         .container {
             width: 100%;
-            max-width: 500px;
+            max-width: 480px;
             display: flex;
             flex-direction: column;
             gap: 25px;
         }
 
-        /* Cabeçalho do Perfil */
+        /* Cabeçalho de Identidade */
         .perfil-header {
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 12px;
-            padding-top: 10px;
-        }
-
-        .avatar-container {
-            position: relative;
-            width: 110px;
-            height: 110px;
         }
 
         .avatar {
-            width: 100%;
-            height: 100%;
+            width: 110px;
+            height: 110px;
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid var(--cor-acento);
@@ -68,22 +61,20 @@
         }
 
         .perfil-header h1 {
-            font-size: 1.35rem;
+            font-size: 1.4rem;
             font-weight: 700;
-            letter-spacing: -0.025em;
+            letter-spacing: -0.02em;
         }
 
-        /* Lista da Bio (Instagram Sincronizado) */
+        /* Lista Base Sincronizada com o Instagram */
         .bio-lista {
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 10px;
             background: var(--bg-card);
-            padding: 16px;
-            border-radius: 12px;
+            padding: 18px;
+            border-radius: 14px;
             border: 1px solid var(--borda);
-            text-align: left;
-            width: 100%;
         }
 
         .bio-item {
@@ -91,114 +82,103 @@
             align-items: center;
             gap: 12px;
             font-size: 0.95rem;
-            color: var(--texto-principal);
+            font-weight: 500;
         }
 
-        .bio-item span {
-            font-size: 1.2rem;
-        }
-
-        /* Botões de Ação Direta */
-        .acoes-container {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            width: 100%;
-        }
-
-        .btn {
+        /* Chamada de Ação Principal (WhatsApp) */
+        .btn-link {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
             width: 100%;
-            padding: 14px;
-            border-radius: 10px;
+            padding: 15px;
+            background-color: var(--cor-botao);
+            color: white;
+            border-radius: 12px;
             font-weight: 600;
             font-size: 0.95rem;
             text-decoration: none;
-            transition: all 0.2s ease;
-            cursor: pointer;
+            transition: background-color 0.2s ease;
             border: none;
+            text-align: center;
         }
 
-        .btn-primario {
-            background-color: var(--cor-botao);
-            color: white;
-        }
-
-        .btn-primario:hover {
+        .btn-link:hover {
             background-color: var(--cor-botao-hover);
         }
 
-        .btn-secundario {
-            background-color: transparent;
-            color: var(--texto-principal);
-            border: 1px solid var(--borda);
-        }
-
-        .btn-secundario:hover {
-            background-color: rgba(255, 255, 255, 0.05);
-        }
-
-        /* Seção de Serviços e Destaques */
-        .secao-titulo {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--texto-secundario);
-            margin-bottom: 5px;
-            font-weight: 600;
-        }
-
-        .grid-servicos {
+        /* Seção Central de Soluções */
+        .secao-servicos {
             display: flex;
             flex-direction: column;
-            gap: 12px;
-            width: 100%;
+            gap: 14px;
         }
 
-        .card-servico {
+        .secao-titulo {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--texto-secundario);
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .card-proposta {
             background: var(--bg-card);
             border: 1px solid var(--borda);
-            border-radius: 10px;
-            padding: 14px;
+            border-radius: 12px;
+            padding: 16px;
             display: flex;
             flex-direction: column;
-            gap: 4px;
-            transition: transform 0.2s ease, background-color 0.2s ease;
+            gap: 6px;
+            transition: background-color 0.2s ease;
         }
 
-        .card-servico:hover {
+        .card-proposta:hover {
             background-color: var(--bg-card-hover);
         }
 
-        .card-servico h3 {
-            font-size: 1rem;
-            color: var(--cor-acento);
+        .card-proposta h3 {
+            font-size: 1.05rem;
+            color: var(--texto-principal);
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
 
-        .card-servico p {
-            font-size: 0.85rem;
+        .card-proposta p {
+            font-size: 0.88rem;
             color: var(--texto-secundario);
         }
 
-        /* Rodapé */
+        .lista-servicos-internos {
+            margin-top: 6px;
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .lista-servicos-internos li {
+            font-size: 0.85rem;
+            color: var(--cor-acento);
+            list-style-type: square;
+        }
+
+        /* Rodapé de Encerramento */
         footer {
-            margin-top: 20px;
+            margin-top: 15px;
             text-align: center;
             font-size: 0.75rem;
             color: var(--texto-secundario);
-            padding: 10px 0;
-            width: 100%;
+            padding-top: 15px;
             border-top: 1px solid var(--borda);
+            width: 100%;
         }
 
         footer span {
             color: var(--cor-acento);
+            font-weight: 600;
         }
     </style>
 </head>
@@ -207,58 +187,67 @@
     <div class="container">
 
         <header class="perfil-header">
-            <div class="avatar-container">
-                <img src="perfil.jpg" alt="Tiago | Tavares Tech Hub" class="avatar">
-            </div>
+            <img src="perfil.jpg" alt="Tiago | Tavares Tech Hub" class="avatar">
             <h1>Tiago | Tavares Tech Hub</h1>
         </header>
 
-        <main class="bio-lista">
-            <div class="bio-item"><span>🤖</span> Expert Inteligência Artificial</div>
-            <div class="bio-item"><span>📱</span> Técnico Mobile-First</div>
-            <div class="bio-item"><span>🤵</span> Mentor Negócios & Carreira</div>
-            <div class="bio-item"><span>🗣️</span> Consultor Vendas & Marketing</div>
-            <div class="bio-item" style="margin-top: 5px; border-top: 1px solid var(--borda); padding-top: 8px; color: var(--texto-secundario);">
-                <span>📄</span> Contrate Meus Serviços 👇
+        <section class="bio-lista">
+            <div class="bio-item">🤖 Expert Inteligência Artificial</div>
+            <div class="bio-item">📱 Técnico Mobile-First</div>
+            <div class="bio-item">🤵 Mentor Negócios & Carreira</div>
+            <div class="bio-item">🗣️ Consultor Vendas & Marketing</div>
+        </section>
+
+        <a href="https://wa.me/5588982340081" target="_blank" class="btn-link">
+            💬 Solicitar Atendimento / Consultoria Privada
+        </a>
+
+        <main class="secao-servicos">
+            <h2 class="secao-titulo">Nossas Soluções Operacionais</h2>
+
+            <div class="card-proposta">
+                <h3><span>🤖</span> Expert Inteligência Artificial</h3>
+                <p>Orquestração avançada e desenvolvimento de arquiteturas inteligentes para otimização operacional de negócios.</p>
+                <ul class="lista-servicos-internos">
+                    <li>Criação de agentes personalizados</li>
+                    <li>Automação de processos operacionais com IA</li>
+                </ul>
+            </div>
+
+            <div class="card-proposta">
+                <h3><span>📱</span> Técnico Mobile-First</h3>
+                <p>Suporte de alto nível, diagnóstico de software e engenharia de segurança diretamente em dispositivos móveis.</p>
+                <ul class="lista-servicos-internos">
+                    <li>Recuperação de conta Gov.br</li>
+                    <li>Blindagem Digital Anti-Golpe</li>
+                    <li>Limpeza e Otimização de Memória Celular</li>
+                    <li>Desbloqueio de Tela</li>
+                </ul>
+            </div>
+
+            <div class="card-proposta">
+                <h3><span>🤵</span> Mentor Negócios & Carreira</h3>
+                <p>Direcionamento estratégico e consultoria corporativa com foco em execução móvel e eficiência de gestão.</p>
+                <ul class="lista-servicos-internos">
+                    <li>Currículos Profissionais de Alto Impacto</li>
+                    <li>Consultoria de Negócio (Operação 100% via Celular)</li>
+                    <li>Auditoria Fiscal e Administrativa</li>
+                </ul>
+            </div>
+
+            <div class="card-proposta">
+                <h3><span>🗣️</span> Consultor Vendas & Marketing</h3>
+                <p>Desenvolvimento e tração comercial ponta a ponta: do design estratégico à conversão final de clientes.</p>
+                <ul class="lista-servicos-internos">
+                    <li>Produção e criação de materiais promocionais</li>
+                    <li>Divulgação estratégica de marcas e produtos</li>
+                    <li>Estruturação e fechamento de Vendas</li>
+                </ul>
             </div>
         </main>
 
-        <section class="acoes-container">
-            <a href="https://wa.me/55XXXXXXXXXXX" target="_blank" class="btn btn-primario">
-                💬 Entrar em Contato via WhatsApp
-            </a>
-            
-            <a href="#solucoes" class="btn btn-secundario">
-                🔍 Ver Catálogo de Serviços
-            </a>
-        </section>
-
-        <section id="solucoes" class="grid-servicos">
-            <h2 class="secao-titulo">Portfólio & Soluções</h2>
-            
-            <div class="card-servico">
-                <h3>🤖 Orquestração de IA</h3>
-                <p>Desenvolvimento e governança de ecossistemas automatizados com agentes modulares inteligentes para empresas.</p>
-            </div>
-
-            <div class="card-servico">
-                <h3>📱 Suporte Técnico Mobile-First</h3>
-                <p>Consultoria avançada, segurança digital em dispositivos móveis, blindagem e recuperação de contas Gov.br.</p>
-            </div>
-
-            <div class="card-servico">
-                <h3>📄 Estratégia de Carreira</h3>
-                <p>Confecção e reestruturação técnica de Currículos de Elite padrão 2026 e mentoria de performance.</p>
-            </div>
-
-            <div class="card-servico">
-                <h3>🛡️ Auditoria & Sistemas (Gol Plus)</h3>
-                <p>Suporte especializado em sistemas integrados de proteção veicular e automação de processos comerciais.</p>
-            </div>
-        </section>
-
         <footer>
-            <p>© 2026 <span>Tavares Tech Hub</span>. Tecnologia Operacional.</p>
+            <p>© 2026 <span>Tavares Tech Hub</span>. Todos os direitos reservados.</p>
         </footer>
 
     </div>
