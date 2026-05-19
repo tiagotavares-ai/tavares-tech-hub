@@ -1,10 +1,9 @@
 # 🚀 Tavares Tech Hub: Orquestração & Eficiência Operacional
-
-![Workflow](https://img.shields.io/badge/Workflow-Mobile--First-blue)
-![Atendimento](https://img.shields.io/badge/Atendimento-Presencial%20(Documentos)-cyan)
-![Infrastructure](https://img.shields.io/badge/Infrastructure-Gemini%20Advanced-orange)
-![Protocolo](https://img.shields.io/badge/Protocolo-Erro%20Zero-red)
-![Pagamento](https://img.shields.io/badge/Pagamento-50%2F50%20(Pix%2FDinheiro)-green)
+![Workflow](https://img.shields.io/badge/Workflow-Mobile--First-blue?v=2026)
+![Atendimento](https://img.shields.io/badge/Atendimento-Presencial%20(Documentos)-cyan?v=2026)
+![Infrastructure](https://img.shields.io/badge/Infrastructure-Gemini%20Advanced-orange?v=2026)
+![Protocolo](https://img.shields.io/badge/Protocolo-Erro%20Zero-red?v=2026)
+![Pagamento](https://img.shields.io/badge/Pagamento-50%2F50%20(Pix%2FDinheiro)-green?v=2026)
 
 O **Tavares Tech Hub** é um ecossistema digital governado por um Orquestrador de Sistemas e IA. Operamos sob uma infraestrutura técnica rigorosa para garantir precisão cirúrgica, automação e soluções personalizadas. Nossa abordagem é Mobile-First, contando com atendimento presencial dedicado para demandas que envolvem análise e triagem de documentação física.
 
