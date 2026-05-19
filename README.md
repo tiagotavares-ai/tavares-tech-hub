@@ -1,45 +1,267 @@
-# 🚀 Tavares Tech Hub: Orquestração & Eficiência Operacional
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tavares Tech Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-principal: #030712;
+            --bg-card: #0b1329;
+            --bg-card-hover: #111b3d;
+            --texto-principal: #f3f4f6;
+            --texto-secundario: #9ca3af;
+            --cor-acento: #38bdf8;
+            --cor-botao: #0284c7;
+            --cor-botao-hover: #0369a1;
+            --borda: rgba(56, 189, 248, 0.15);
+            --borda-hover: rgba(56, 189, 248, 0.4);
+        }
 
-![Workflow](https://img.shields.io/badge/Workflow-100%25%20Mobile-blue)
-![Infrastructure](https://img.shields.io/badge/Infrastructure-Gemini%20Advanced-orange)
-![Protocolo](https://img.shields.io/badge/Protocolo-Erro%20Zero-red)
-![Pagamento](https://img.shields.io/badge/Pagamento-50%2F50%20(Pix%2FDinheiro)-green)
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Urbanist', sans-serif;
+        }
 
-O **Tavares Tech Hub** é um ecossistema digital governado por um **Orquestrador de IA**. Operamos sob uma infraestrutura técnica rigorosa para garantir precisão cirúrgica, execução ágil e soluções personalizadas, tudo processado 100% via mobile.
+        body {
+            background-color: var(--bg-principal);
+            color: var(--texto-principal);
+            line-height: 1.6;
+            padding: 30px 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
----
+        .container {
+            width: 100%;
+            max-width: 480px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
 
-## ✅ Serviços Disponíveis
-Nossa operação é dividida em frentes especializadas para atender demandas complexas com eficiência industrial:
+        /* Área de Destaque da Logomarca */
+        .brand-header {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 0;
+        }
 
-| Categoria | Especialidade | Função Principal |
-| :--- | :--- | :--- |
-| **Pesquisa de Fé** | Estudos Bíblicos & Resiliência | Suporte técnico à pesquisa bíblica (Nicho JW) e saúde mental. |
-| **Marketing IA** | Mídia & Posicionamento Digital | Estratégia de vendas, marketing e conversão de mídias via IA. |
-| **Gestão Fiscal** | Comercial, MEI & Finanças | Inteligência comercial, orçamentos e regularização de MEI. |
-| **Assistência Mobile** | Execução Técnica Passo a Passo | Suporte em sistemas, blindagem digital e suporte mobile. |
-| **Direitos Sociais** | Ética & Suporte PCD/Autista | Redação técnica, contratos e orientação em direitos sociais. |
-| **Mentoria Tech** | Suporte em ADS & Tecnologia | Mentoria acadêmica em Sistemas e treinamento em IA. |
+        .logo-wrapper {
+            width: 100%;
+            max-width: 280px;
+            aspect-ratio: 1 / 1;
+            background: rgba(11, 19, 41, 0.5);
+            border: 1px solid var(--borda);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(56, 189, 248, 0.05);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
----
+        .logo-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-## 🛠️ Metodologia Operacional (Protocolo Erro Zero)
+        /* Vitrine de Soluções */
+        .vitrine-servicos {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
 
-Nossa estrutura de trabalho prioriza a transparência e a segurança do cliente:
+        .secao-titulo {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--cor-acento);
+            font-weight: 700;
+            margin-bottom: 2px;
+            padding-left: 4px;
+        }
 
-1.  **Avaliação Gratuita:** Todo pedido inicia com uma análise de 5 minutos sem custos para validar a solução.
-2.  **Workflow 100% Mobile:** Versatilidade total e prontidão operativa através de dispositivos móveis.
-3.  **Política de Pagamento:** Execução iniciada após sinal de **50% do valor**. Os **50% restantes** são pagos imediatamente no ato da entrega.
-4.  **Métodos Aceitos:** Exclusivamente via **Pix** ou **Dinheiro**.
+        .card-servico {
+            background: var(--bg-card);
+            border: 1px solid var(--borda);
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transition: all 0.2s ease;
+        }
 
----
+        .card-servico:hover {
+            border-color: var(--borda-hover);
+            background-color: var(--bg-card-hover);
+        }
 
-## 🤝 Programa Indique e Ganhe
-Transformamos sua satisfação em crédito. Clientes ativos na nossa lista oficial podem monetizar suas indicações:
-* **Bônus:** R$ 10,00 de crédito para cada indicação que converter em serviço pago.
-* **Acúmulo:** Limite de até **R$ 100,00** em descontos acumulados para uso no Hub.
+        .card-servico h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
----
+        .card-servico p {
+            font-size: 0.88rem;
+            color: var(--texto-secundario);
+            font-weight: 400;
+        }
 
-### 🌐 Conecte-se ao Ecossistema
-[Acesse a Vitrine Oficial do Hub](https://tiagotavares-ai.github.io/tavares-tech-hub/)
+        .lista-items {
+            margin-top: 2px;
+            padding-left: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .lista-items li {
+            font-size: 0.85rem;
+            color: var(--texto-principal);
+            list-style-type: none;
+            position: relative;
+            padding-left: 14px;
+        }
+
+        .lista-items li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--cor-acento);
+            font-weight: bold;
+        }
+
+        /* Botão de Ação Integrado ao Card */
+        .btn-card-cta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 12px;
+            background-color: var(--cor-botao);
+            color: #ffffff;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            text-align: center;
+            margin-top: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 10px rgba(2, 132, 199, 0.2);
+        }
+
+        .btn-card-cta:hover {
+            background-color: var(--cor-botao-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 15px rgba(2, 132, 199, 0.3);
+        }
+
+        /* Rodapé */
+        .hub-footer {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--texto-secundario);
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            width: 100%;
+        }
+
+        .hub-footer span {
+            color: var(--cor-acento);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <header class="brand-header">
+            <div class="logo-wrapper">
+                <img src="Logomarca.jpg" alt="Tavares Tech Hub Logomarca">
+            </div>
+        </header>
+
+        <main class="vitrine-servicos">
+            <h2 class="secao-titulo">Nossas Soluções Operacionais</h2>
+
+            <div class="card-servico">
+                <h3><span>🤖</span> Expert Inteligência Artificial</h3>
+                <p>Orquestração e desenvolvimento de arquiteturas e automações inteligentes para otimização de negócios.</p>
+                <ul class="lista-items">
+                    <li>Criação de agentes personalizados</li>
+                    <li>Automação de processos operacionais com IA</li>
+                </ul>
+                <a href="https://wa.me/5588982340081?text=Olá!%20Gostaria%20de%20automatizar%20meus%20processos%20e%20criar%20um%20Agente%20de%20IA%20personalizado." target="_blank" class="btn-card-cta">
+                    💬 Automatizar com IA
+                </a>
+            </div>
+
+            <div class="card-servico">
+                <h3><span>📱</span> Técnico Mobile-First</h3>
+                <p>Suporte especializado, diagnóstico de software e blindagem de segurança para ecossistemas móveis.</p>
+                <ul class="lista-items">
+                    <li>Recuperação de conta Gov.br</li>
+                    <li>Blindagem Digital Anti-Golpe</li>
+                    <li>Limpeza e Otimização de Memória Celular</li>
+                    <li>Desbloqueio de Tela</li>
+                </ul>
+                <a href="https://wa.me/5588982340081?text=Olá!%20Preciso%20de%20suporte%20técnico%20no%20meu%20celular%20(Acesso/Segurança/Otimização)." target="_blank" class="btn-card-cta">
+                    💬 Suporte / Blindagem
+                </a>
+            </div>
+
+            <div class="card-servico">
+                <h3><span>🤵</span> Mentor Negócios & Carreira</h3>
+                <p>Consultoria analítica e documental voltada à alta performance e gestão móvel simplificada.</p>
+                <ul class="lista-items">
+                    <li>Currículos Profissionais de Alto Impacto</li>
+                    <li>Consultoria de Negócio (Operação 100% via Celular)</li>
+                    <li>Auditoria Fiscal e Administrativa</li>
+                </ul>
+                <a href="https://wa.me/5588982340081?text=Olá!%20Tenho%20interesse%20na%20Mentoria%20de%20Negócios,%20Currículo%20ou%20Auditoria." target="_blank" class="btn-card-cta">
+                    💬 Mentoria / Auditoria
+                </a>
+            </div>
+
+            <div class="card-servico">
+                <h3><span>🗣️</span> Consultor Vendas & Marketing</h3>
+                <p>Desenvolvimento comercial completo: englobando a cadeia de design de mídia, divulgação e conversão.</p>
+                <ul class="lista-items">
+                    <li>Produção e criação de materiais promocionais</li>
+                    <li>Divulgação estratégica de marcas e produtos</li>
+                    <li>Estruturação e fechamento de Vendas</li>
+                </ul>
+                <a href="https://wa.me/5588982340081?text=Olá!%20Quero%20alavancar%20minhas%20vendas%20e%20estruturar%20a%20divulgação%20da%20minha%20marca." target="_blank" class="btn-card-cta">
+                    💬 Alavancar Vendas
+                </a>
+            </div>
+        </main>
+
+        <footer class="hub-footer">
+            <p>© 2026 <span>Tavares Tech Hub</span>. Todos os direitos reservados.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
