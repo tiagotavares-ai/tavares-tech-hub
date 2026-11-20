@@ -412,7 +412,7 @@ function App() {
 
           <div className="text-center pt-8 border-t border-blue-800">
             <p className="text-blue-200">
-              © 2025 Tavares Tech Hub. Simplificando a vida através da tecnologia.
+              © 2026 Tavares Tech Hub. Simplificando a vida através da tecnologia.
             </p>
           </div>
         </div>
